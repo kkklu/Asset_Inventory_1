@@ -109,7 +109,15 @@ class Asset_Inventory(QWidget,form_ui.Ui_Widget): #有没有机会改为QWidget�
                     input_table_items = str(input_table_items_list)
                     newItem = QTableWidgetItem(input_table_items) 
                     newItem.setTextAlignment(Qt.AlignHCenter|Qt.AlignVCenter)
-                    self.tableWidget.setItem((i-p), j, newItem) 
+                    self.tableWidget.setItem((i-p), j, newItem)
+                    
+                    self.tableWidget.setColumnHidden(0,True)
+                    self.tableWidget.setColumnHidden(4,True)
+                    self.tableWidget.setColumnHidden(5,True)
+                    self.tableWidget.setColumnHidden(6,True)
+                    self.tableWidget.setColumnHidden(7,True)
+                    self.tableWidget.setColumnHidden(8,True)
+
                     self.lcdNumber.display((i-p))
         ###================遍历表格每个元素，同时添加到tablewidget中========================
             else:
@@ -130,7 +138,15 @@ class Asset_Inventory(QWidget,form_ui.Ui_Widget): #有没有机会改为QWidget�
                     input_table_items_2 = str(input_table_items_list_2)
                     newItem_2 = QTableWidgetItem(input_table_items_2) 
                     newItem_2.setTextAlignment(Qt.AlignHCenter|Qt.AlignVCenter)
-                    self.tableWidget_2.setItem(p-1, q, newItem_2) 
+                    self.tableWidget_2.setItem(p-1, q, newItem_2)
+                    
+                    self.tableWidget_2.setColumnHidden(0,True)
+                    self.tableWidget_2.setColumnHidden(4,True)
+                    self.tableWidget_2.setColumnHidden(5,True)
+                    self.tableWidget_2.setColumnHidden(6,True)
+                    self.tableWidget_2.setColumnHidden(7,True)
+                    self.tableWidget_2.setColumnHidden(8,True)
+                    
                     self.lcdNumber_2.display(p)
         else:
             pass#self.centralWidget.show()

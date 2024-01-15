@@ -17,7 +17,7 @@ class Ui_Widget(object):
     def setupUi(self, Widget):
         if not Widget.objectName():
             Widget.setObjectName(u"Widget")
-        Widget.resize(1273, 642)
+        Widget.resize(1479, 684)
         icon = QIcon()
         icon.addFile(u"logo.png", QSize(), QIcon.Normal, QIcon.Off)
         Widget.setWindowIcon(icon)
@@ -62,7 +62,7 @@ class Ui_Widget(object):
 
         self.layoutWidget1 = QWidget(Widget)
         self.layoutWidget1.setObjectName(u"layoutWidget1")
-        self.layoutWidget1.setGeometry(QRect(70, 140, 1171, 42))
+        self.layoutWidget1.setGeometry(QRect(20, 140, 1441, 42))
         self.horizontalLayout_2 = QHBoxLayout(self.layoutWidget1)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -98,21 +98,21 @@ class Ui_Widget(object):
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer_3)
 
-        self.layoutWidget2 = QWidget(Widget)
-        self.layoutWidget2.setObjectName(u"layoutWidget2")
-        self.layoutWidget2.setGeometry(QRect(65, 191, 1181, 401))
-        self.horizontalLayout_3 = QHBoxLayout(self.layoutWidget2)
-        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.tableWidget = QTableWidget(self.layoutWidget2)
-        self.tableWidget.setObjectName(u"tableWidget")
-
-        self.horizontalLayout_3.addWidget(self.tableWidget)
-
-        self.tableWidget_2 = QTableWidget(self.layoutWidget2)
+        self.widget = QWidget(Widget)
+        self.widget.setObjectName(u"widget")
+        self.widget.setGeometry(QRect(20, 190, 1441, 481))
+        self.gridLayout = QGridLayout(self.widget)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.tableWidget_2 = QTableWidget(self.widget)
         self.tableWidget_2.setObjectName(u"tableWidget_2")
 
-        self.horizontalLayout_3.addWidget(self.tableWidget_2)
+        self.gridLayout.addWidget(self.tableWidget_2, 0, 2, 1, 1)
+
+        self.tableWidget = QTableWidget(self.widget)
+        self.tableWidget.setObjectName(u"tableWidget")
+
+        self.gridLayout.addWidget(self.tableWidget, 0, 1, 1, 1)
 
 
         self.retranslateUi(Widget)
